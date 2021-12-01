@@ -1,0 +1,41 @@
+nav {
+  padding: 0 1.4rem;
+}
+
+nav ul a:hover {
+  background-color: transparent;
+}
+
+.brand-logo {
+  cursor: pointer;
+}
+
+.logoIcon {
+  width: 150px;
+  padding: 5px;
+}
+
+.gitIcon {
+  display: block;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, 50%) rotate(90deg);
+  cursor: pointer;
+}
+
+.logoText {
+  color: #fff;
+  margin-left: 160px;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+@media(max-width: 655px) {
+  .logoText {
+      display: none;
+  }
+  .logoIcon {
+    width: 90px;
+    padding: 5px;
+  }
+}

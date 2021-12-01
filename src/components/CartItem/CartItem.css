@@ -1,0 +1,44 @@
+.cartContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 1% 2%;
+    width: 50rem;
+    max-width: 95%;
+    box-shadow: 0px 0px 4px 2px #512da8;
+    animation: show 500ms ease-in-out;
+}
+.collection {
+    font-size: 1.5rem;
+}
+
+.collection-item .secondary-content {
+    cursor: pointer;
+}
+.cart-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    cursor: pointer;
+}
+
+.cartQuantity {
+    cursor: pointer;
+    vertical-align: middle;
+    color: #00bcd4;
+    border: 0.3px solid #512da8;
+    border-radius: 5px;
+}
+
+@keyframes show {
+    from {
+        top:  70%;
+        opacity: 0;
+    } to {
+        top: 50%;
+        opacity: 1;
+    }
+}
+

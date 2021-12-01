@@ -1,0 +1,28 @@
+.input-field {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 0;
+    width: 100%;
+  }
+  
+  .input-field input[type="text"] {
+    margin-right: 2%;
+    padding: 1px 8px;
+    transition: 0.3s all;
+    font-size: 1.3rem;
+    letter-spacing: 0.8px;
+  }
+
+  @media (max-width: 985px) {
+    .input-field input[type="text"] {
+      width: 80%;
+      margin-top: 5%;
+    }
+  }
+
+  @media(max-width: 655px) {
+    .input-field input[type="text"] {
+      margin-top: 2%;
+    }
+  }
+  

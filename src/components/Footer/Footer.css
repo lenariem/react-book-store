@@ -1,0 +1,19 @@
+.page-footer {
+    background-color: transparent;
+    position: fixed;
+    width: 100vw;
+    bottom: 0;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5%;
+}
+
+.page-footer .footer-copyright {
+    padding: 0;
+    color: #fff;
+}
+

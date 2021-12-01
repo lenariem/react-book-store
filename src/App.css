@@ -1,0 +1,24 @@
+.App {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+a {
+  color: #000;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* deep-orange lighten-1 #ff7043
+  deep-purple darken-2 #512da8
+  deep-purple accent-2 #7c4dff
+  cyan #00bcd4
+*/
