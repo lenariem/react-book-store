@@ -3,11 +3,7 @@ import { ShopContext } from "../../context/context";
 import "./Cart.css";
 
 export default function Cart() {
-  const {
-    order,
-    setCartShown,
-    toggleCartDisplay,
-  } = useContext(ShopContext);
+  const { order, setCartShown, toggleCartDisplay } = useContext(ShopContext);
 
   const quantity = order.length;
 

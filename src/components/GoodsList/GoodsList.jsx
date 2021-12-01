@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import { ShopContext } from "../../context/context";
-import "./GoodsList.css";
 import GoodItem from "../GoogItem/GoodItem";
+import "./GoodsList.css";
 
 export default function GoodsList() {
   const {goods = [] } = useContext(ShopContext);

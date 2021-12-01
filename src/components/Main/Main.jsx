@@ -1,4 +1,4 @@
-import React, { /* useState, */ useEffect, useContext } from "react";
+import React, {  useEffect, useContext } from "react";
 import { API_URL } from "../../config";
 import { ShopContext } from "../../context/context";
 import Preloader from "../Preloader/Preloader";
@@ -9,7 +9,7 @@ import Popup from "../Popup/Popup";
 import Search from "../Search/Search";
 
 export default function Main() {
-  const { goods, loading, order, isCartShown, popupTitle, setGoods } =
+  const { goods, loading, isCartShown, popupTitle, setGoods } =
     useContext(ShopContext);
   /*  const [goods, setGoods] = useState([]); */
   /* const [loading, setLoading] = useState(true);
@@ -107,6 +107,7 @@ export default function Main() {
   //get goods on componentDidMount
   useEffect(() => {
     getData(API_URL, "new");
+    // eslint-disable-next-line 
   }, []);
 
   return (

@@ -10,9 +10,7 @@ export default function GoodItem(props) {
     subtitle = "No description",
     image = "No Book Cover available",
     price = "No Info",
-    /* addToCart, */
   } = props;
-
 
   const {addToCart} = useContext( ShopContext );
   const [btnText, setBtnText] = useState("About Book");

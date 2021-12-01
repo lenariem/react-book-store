@@ -2,8 +2,8 @@ import React, { useContext } from "react";
 import { ShopContext } from "../../context/context";
 import StripeCheckout from "react-stripe-checkout";
 import { STRIPE_KEY } from "../../config";
-import "./CartList.css";
 import CartItem from "../CartItem/CartItem";
+import "./CartList.css";
 
 export default function CartList() {
   const { order = [], toggleCartDisplay = Function.prototype } =

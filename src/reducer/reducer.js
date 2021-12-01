@@ -48,7 +48,7 @@ export function reducer(state, action) {
       return {
         ...state,
         order: newOrder,
-        popupTitle: payload.name,
+        popupTitle: payload.title,
       };
     }
 
