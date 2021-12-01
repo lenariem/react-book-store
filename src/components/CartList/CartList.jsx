@@ -1,17 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ShopContext } from "../../context/context";
 import StripeCheckout from "react-stripe-checkout";
 import { STRIPE_KEY } from "../../config";
 import "./CartList.css";
 import CartItem from "../CartItem/CartItem";
 
-export default function CartList(props) {
-  const {
-    order = [],
-    toggleCartDisplay = Function.prototype,
-    deleteFromCart = Function.prototype,
-    incQuantity = Function.prototype,
-    decQuantity = Function.prototype,
-  } = props;
+export default function CartList() {
+  const { order = [], toggleCartDisplay = Function.prototype } =
+    useContext(ShopContext);
 
   const totalPrice = order
     .reduce((sum, el) => {
@@ -28,15 +24,7 @@ export default function CartList(props) {
       <h4 className="collection-item">Your Order: </h4>
       <ul className="collection">
         {order.length ? (
-          order.map((item) => (
-            <CartItem
-              key={item.id}
-              {...item}
-              deleteFromCart={deleteFromCart}
-              incQuantity={incQuantity}
-              decQuantity={decQuantity}
-            />
-          ))
+          order.map((item) => <CartItem key={item.id} {...item} />)
         ) : (
           <li className="collection-item">Your cart is empty</li>
         )}

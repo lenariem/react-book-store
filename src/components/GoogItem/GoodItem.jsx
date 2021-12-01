@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./GoodItem.css";
 import { API_URL } from "../../config";
+import {ShopContext} from '../../context/context.js';
 
 export default function GoodItem(props) {
   const {
@@ -9,9 +10,11 @@ export default function GoodItem(props) {
     subtitle = "No description",
     image = "No Book Cover available",
     price = "No Info",
-    addToCart,
+    /* addToCart, */
   } = props;
 
+
+  const {addToCart} = useContext( ShopContext );
   const [btnText, setBtnText] = useState("About Book");
   const [singleBookData, setSingleBookData] = useState([]);
   const {authors,language, pages, year, desc } = singleBookData;

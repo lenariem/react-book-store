@@ -1,12 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
+import { ShopContext } from "../../context/context";
 import "./Cart.css";
 
-export default function Cart(props) {
+export default function Cart() {
   const {
-    quantity = 0,
+    order,
     setCartShown,
-    toggleCartDisplay = Function.prototype,
-  } = props;
+    toggleCartDisplay,
+  } = useContext(ShopContext);
+
+  const quantity = order.length;
 
   //close cart on esc press
   useEffect(() => {

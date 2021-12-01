@@ -1,8 +1,9 @@
-import React, { useEffect} from 'react';
+import React, { useEffect, useContext } from 'react';
+import { ShopContext } from '../../context/context';
 import './Popup.css';
 
-export default function Popup(props) {
-    const {title = '', closePopup = Function.prototype} = props;
+export default function Popup() {
+    const {popupTitle: title = '', closePopup = Function.prototype} = useContext(ShopContext);
     
     useEffect(() => {
         const timerId = setTimeout(closePopup, 3000);

@@ -1,12 +1,10 @@
-import React from "react";
+import React, {useContext} from "react";
+import { ShopContext } from "../../context/context";
 import "./GoodsList.css";
 import GoodItem from "../GoogItem/GoodItem";
 
-export default function GoodsList(props) {
-  const {
-    goods = [],
-    addToCart = Function.prototype,
-  } = props;
+export default function GoodsList() {
+  const {goods = [] } = useContext(ShopContext);
   
   if (!goods.length) {
     return <h3 className="noResult">No goods in shop now</h3>;
@@ -18,7 +16,6 @@ export default function GoodsList(props) {
         <GoodItem
           key={item.isbn13}
           {...item}
-          addToCart={addToCart}
         />
       ))}
     </div>

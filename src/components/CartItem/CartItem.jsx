@@ -1,19 +1,10 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import "./CartItem.css";
 import { ShopContext } from "../../context/context";
 
-export default function CartItem({
-  id,
-  title,
-  price,
-  image,
-  quantity,
-  deleteFromCart,
-  incQuantity,
-  decQuantity,
-}) {
-  const {test} = useContext(ShopContext);
-  console.log(test);
+export default function CartItem({ id, title, price, image, quantity }) {
+  const { deleteFromCart, incQuantity, decQuantity } = useContext(ShopContext);
+
   return (
     <li className="collection-item avatar">
       <img src={image} alt={title} className="circle" />

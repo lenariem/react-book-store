@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { /* useState, */ useEffect, useContext } from "react";
 import { API_URL } from "../../config";
+import { ShopContext } from "../../context/context";
 import Preloader from "../Preloader/Preloader";
 import GoodsList from "../GoodsList/GoodsList";
 import Cart from "../Cart/Cart";
@@ -8,11 +9,13 @@ import Popup from "../Popup/Popup";
 import Search from "../Search/Search";
 
 export default function Main() {
-  const [goods, setGoods] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [order, setOrder] = useState([]);
-  const [isCartShown, setCartShown] = useState(false);
-  const [popupTitle, setPopupTitle] = useState("");
+  const { goods, loading, order, isCartShown, popupTitle, setGoods } =
+    useContext(ShopContext);
+  /*  const [goods, setGoods] = useState([]); */
+  /* const [loading, setLoading] = useState(true);
+  const [order, setOrder] = useState([]); */
+  /* const [isCartShown, setCartShown] = useState(false);
+  const [popupTitle, setPopupTitle] = useState(""); */
 
   //fetch data from API
   const getData = (urlToFetch, term = "new") => {
@@ -20,22 +23,20 @@ export default function Main() {
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        data.books && setGoods(data.books);
-        setLoading(false);
+        setGoods(data.books);
       })
       .catch((err) => {
         console.log(err);
-        setLoading(false);
       });
   };
 
   //shown or hidden cart
-  const toggleCartDisplay = () => {
+  /* const toggleCartDisplay = () => {
     setCartShown(!isCartShown);
-  };
+  }; */
 
   //add good to cart
-  const addToCart = (item) => {
+  /* const addToCart = (item) => {
     //to check if item already in cart
     const itemIndex = order.findIndex((orderItem) => orderItem.id === item.id);
     if (itemIndex < 0) {
@@ -60,16 +61,16 @@ export default function Main() {
       setOrder(newOrder);
     }
     setPopupTitle(item.title);
-  };
+  }; */
 
   //delete from cart
-  const deleteFromCart = (id) => {
+  /*  const deleteFromCart = (id) => {
     const newOrder = order.filter((item) => item.id !== id);
     setOrder(newOrder);
-  };
+  }; */
 
   //increment and decrement quantity in cart
-  const incQuantity = (id) => {
+  /* const incQuantity = (id) => {
     const newOrder = order.map((item) => {
       if (item.id === id) {
         return {
@@ -82,8 +83,8 @@ export default function Main() {
     });
     setOrder(newOrder);
   };
-
-  const decQuantity = (id) => {
+ */
+  /* const decQuantity = (id) => {
     const newOrder = order.map((item) => {
       if (item.id === id) {
         const newQuantity = item.quantity - 1;
@@ -96,12 +97,12 @@ export default function Main() {
       }
     });
     setOrder(newOrder);
-  };
+  }; */
 
   //popup add to cart
-  const closePopup = () => {
+  /* const closePopup = () => {
     setPopupTitle("");
-  };
+  }; */
 
   //get goods on componentDidMount
   useEffect(() => {
@@ -111,31 +112,18 @@ export default function Main() {
   return (
     <main className="container content">
       <Search getData={getData} goodsLength={goods.length} />
-      <Cart
-        order={order}
-        quantity={order.length}
-        toggleCartDisplay={toggleCartDisplay}
-        setCartShown={setCartShown}
-      />
+      <Cart />
       {loading ? (
         <Preloader />
       ) : (
         <div>
-          <GoodsList goods={goods} addToCart={addToCart} />
+          <GoodsList />
         </div>
       )}
 
-      {isCartShown && (
-        <CartList
-          order={order}
-          toggleCartDisplay={toggleCartDisplay}
-          deleteFromCart={deleteFromCart}
-          incQuantity={incQuantity}
-          decQuantity={decQuantity}
-        />
-      )}
+      {isCartShown && <CartList />}
 
-      {popupTitle && <Popup title={popupTitle} closePopup={closePopup} />}
+      {popupTitle && <Popup />}
     </main>
   );
 }
