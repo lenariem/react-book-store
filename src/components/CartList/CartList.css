@@ -6,6 +6,7 @@
     max-height: 80%;
     overflow-y: scroll;
     z-index: 25;
+    /* not allow plus/minus btns select */
     -webkit-user-select: none;  
     -moz-user-select: none;    
     -ms-user-select: none;      
