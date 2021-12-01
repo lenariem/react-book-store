@@ -3,7 +3,7 @@ import { ShopContext } from "../../context/context";
 import "./Cart.css";
 
 export default function Cart() {
-  const { order, setCartShown, toggleCartDisplay } = useContext(ShopContext);
+  const { order, toggleCartDisplay } = useContext(ShopContext);
 
   const quantity = order.length;
 
@@ -11,12 +11,12 @@ export default function Cart() {
   useEffect(() => {
     const close = (e) => {
       if (e.keyCode === 27) {
-        setCartShown(false);
+        toggleCartDisplay();
       }
     };
     window.addEventListener("keydown", close);
     return () => window.removeEventListener("keydown", close);
-  }, [setCartShown]);
+  }, [toggleCartDisplay]);
 
   return (
     <div

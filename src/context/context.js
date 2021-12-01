@@ -7,7 +7,7 @@ const initState = {
   goods: [],
   loading: true,
   order: [],
-  isCartShow: false,
+  isCartShown: false,
   popupTitle: "",
 };
 
@@ -18,7 +18,7 @@ export const ContextProvider = ({ children }) => {
   value.setGoods = (data) => {
     dispatch({ type: "SET_GOODS", payload: data });
   };
-  
+
   //popup add to cart
   value.closePopup = () => {
     dispatch({ type: "CLOSE_POPUP" });
