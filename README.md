@@ -2,7 +2,7 @@
 
 **to take a look please click this link:** 
 
- https://lenariem.github.io/react-book-store/
+ https://lenariem.github.io/react-it-book-store/
 
 ### Technologies used: 
 * React JS (context, reducer, hooks);
