@@ -2,7 +2,7 @@ import "./App.css";
 import Header from "./components/Header/Header.jsx";
 import Main from "./components/Main/Main";
 import Footer from "./components/Footer/Footer";
-import {ContextProvider} from './context/context';
+import { ContextProvider } from "./context/context";
 
 function App() {
   return (

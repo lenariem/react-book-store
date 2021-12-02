@@ -3,11 +3,11 @@ export function reducer(state, action) {
 
   switch (type) {
     case "SET_GOODS":
-          return {
-            ...state,
-            goods: payload || [],
-            loading: false,
-          };
+      return {
+        ...state,
+        goods: payload || [],
+        loading: false,
+      };
     case "CLOSE_POPUP":
       return {
         ...state,
@@ -19,7 +19,6 @@ export function reducer(state, action) {
         isCartShown: !state.isCartShown,
       };
     case "ADD_TO_CART": {
-      /* const item = payload.item; */
       //to check if item already in cart
       const itemIndex = state.order.findIndex(
         (orderItem) => orderItem.id === payload.id
@@ -75,16 +74,16 @@ export function reducer(state, action) {
       return {
         ...state,
         order: state.order.map((item) => {
-            if (item.id === payload.id) {
-              const newQuantity = item.quantity - 1;
-              return {
-                ...item,
-                quantity: newQuantity >= 0 ? newQuantity : 0,
-              };
-            } else {
-              return item;
-            }
-          }),
+          if (item.id === payload.id) {
+            const newQuantity = item.quantity - 1;
+            return {
+              ...item,
+              quantity: newQuantity >= 0 ? newQuantity : 0,
+            };
+          } else {
+            return item;
+          }
+        }),
       };
 
     default:

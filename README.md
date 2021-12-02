@@ -5,7 +5,7 @@
  https://lenariem.github.io/react-book-store/
 
 ### Technologies used: 
-* React JS;
+* React JS (context, reducer, hooks);
 * CSS;
 * Materialize;
 * Fetch API;
