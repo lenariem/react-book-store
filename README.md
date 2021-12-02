@@ -11,7 +11,7 @@
 * Fetch API;
 * IT Bookstore API (https://api.itbook.store/#api-books);
 * responsive for different devices (@media queries);
-* GitHub Pages;
+* Vercel;
 
 ### User can:
 * search books by title, author or key words;
