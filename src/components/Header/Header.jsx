@@ -16,7 +16,7 @@ export default function Header() {
           <ul id="nav-mobile" className="right hide-on-med-and-down">
             <li>
               <a
-                href="https://github.com/lenariem/react-shop"
+                href="https://github.com/lenariem/react-it-book-store"
                 title="Repo on GitHub"
                 target="blank"
               >
