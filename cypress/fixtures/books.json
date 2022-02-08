@@ -1,0 +1,166 @@
+{
+    "error": "0",
+    "total": "20",
+    "books": [
+        {
+            "title": "The Official Raspberry Pi Handbook 2022",
+            "subtitle": "",
+            "isbn13": "1001643027241",
+            "price": "$0.00",
+            "image": "https://itbook.store/img/books/1001643027241.png",
+            "url": "https://itbook.store/books/1001643027241"
+        },
+        {
+            "title": "The Art of 64-Bit Assembly",
+            "subtitle": "x86-64 Machine Organization and Programming",
+            "isbn13": "9781718501089",
+            "price": "$59.76",
+            "image": "https://itbook.store/img/books/9781718501089.png",
+            "url": "https://itbook.store/books/9781718501089"
+        },
+        {
+            "title": "The Book of Inkscape, 2nd Edition",
+            "subtitle": "The Definitive Guide to the Graphics Editor",
+            "isbn13": "9781718501751",
+            "price": "$36.76",
+            "image": "https://itbook.store/img/books/9781718501751.png",
+            "url": "https://itbook.store/books/9781718501751"
+        },
+        {
+            "title": "Rust for Rustaceans",
+            "subtitle": "Idiomatic Programming for Experienced Developers",
+            "isbn13": "9781718501850",
+            "price": "$29.99",
+            "image": "https://itbook.store/img/books/9781718501850.png",
+            "url": "https://itbook.store/books/9781718501850"
+        },
+        {
+            "title": "Ethical Hacking",
+            "subtitle": "A Hands-on Introduction to Breaking In",
+            "isbn13": "9781718501874",
+            "price": "$33.12",
+            "image": "https://itbook.store/img/books/9781718501874.png",
+            "url": "https://itbook.store/books/9781718501874"
+        },
+        {
+            "title": "Math for Deep Learning",
+            "subtitle": "What You Need to Know to Understand Neural Networks",
+            "isbn13": "9781718501904",
+            "price": "$37.30",
+            "image": "https://itbook.store/img/books/9781718501904.png",
+            "url": "https://itbook.store/books/9781718501904"
+        },
+        {
+            "title": "Designing Secure Software",
+            "subtitle": "A Guide for Developers",
+            "isbn13": "9781718501928",
+            "price": "$38.57",
+            "image": "https://itbook.store/img/books/9781718501928.png",
+            "url": "https://itbook.store/books/9781718501928"
+        },
+        {
+            "title": "Practical Linux Forensics",
+            "subtitle": "A Guide for Digital Investigators",
+            "isbn13": "9781718501966",
+            "price": "$44.49",
+            "image": "https://itbook.store/img/books/9781718501966.png",
+            "url": "https://itbook.store/books/9781718501966"
+        },
+        {
+            "title": "Object-Oriented Python",
+            "subtitle": "Master OOP by Building Games and GUIs",
+            "isbn13": "9781718502062",
+            "price": "$44.89",
+            "image": "https://itbook.store/img/books/9781718502062.png",
+            "url": "https://itbook.store/books/9781718502062"
+        },
+        {
+            "title": "PHP 8 Solutions, 5th Edition",
+            "subtitle": "Dynamic Web Design and Development Made Easy",
+            "isbn13": "9781484271407",
+            "price": "$45.25",
+            "image": "https://itbook.store/img/books/9781484271407.png",
+            "url": "https://itbook.store/books/9781484271407"
+        },
+        {
+            "title": "Stylish F# 6, 2nd Edition",
+            "subtitle": "Crafting Elegant Functional Code for .NET 6",
+            "isbn13": "9781484272046",
+            "price": "$41.06",
+            "image": "https://itbook.store/img/books/9781484272046.png",
+            "url": "https://itbook.store/books/9781484272046"
+        },
+        {
+            "title": "Cloud Native Architecture and Design",
+            "subtitle": "A Handbook for Modern Day Architecture and Design with Enterprise-Grade Examples",
+            "isbn13": "9781484272251",
+            "price": "$41.38",
+            "image": "https://itbook.store/img/books/9781484272251.png",
+            "url": "https://itbook.store/books/9781484272251"
+        },
+        {
+            "title": "Mastering VMware Horizon 8",
+            "subtitle": "An Advanced Guide to Delivering Virtual Desktops and Virtual Apps",
+            "isbn13": "9781484272602",
+            "price": "$47.74",
+            "image": "https://itbook.store/img/books/9781484272602.png",
+            "url": "https://itbook.store/books/9781484272602"
+        },
+        {
+            "title": "Java Challenges",
+            "subtitle": "100+ Proven Tasks that Will Prepare You for Anything",
+            "isbn13": "9781484273944",
+            "price": "$48.95",
+            "image": "https://itbook.store/img/books/9781484273944.png",
+            "url": "https://itbook.store/books/9781484273944"
+        },
+        {
+            "title": "Computer Vision and Augmented Reality in iOS",
+            "subtitle": "OpenCV and ARKit Applications",
+            "isbn13": "9781484274613",
+            "price": "$44.99",
+            "image": "https://itbook.store/img/books/9781484274613.png",
+            "url": "https://itbook.store/books/9781484274613"
+        },
+        {
+            "title": "C and Python Applications",
+            "subtitle": "Embedding Python Code in C Programs, SQL Methods, and Python Sockets",
+            "isbn13": "9781484277737",
+            "price": "$33.74",
+            "image": "https://itbook.store/img/books/9781484277737.png",
+            "url": "https://itbook.store/books/9781484277737"
+        },
+        {
+            "title": "Tutorials of Visual Graphic Communication Programs for Interior Design",
+            "subtitle": "A total of 22 AutoCAD, Revit, Enscape tutorials for producing draftings, construction documents, renderings, and animations",
+            "isbn13": "1001642413764",
+            "price": "$0.00",
+            "image": "https://itbook.store/img/books/1001642413764.png",
+            "url": "https://itbook.store/books/1001642413764"
+        },
+        {
+            "title": "Efficient MySQL Performance",
+            "subtitle": "Best Practices and Techniques",
+            "isbn13": "9781098105099",
+            "price": "$45.92",
+            "image": "https://itbook.store/img/books/9781098105099.png",
+            "url": "https://itbook.store/books/9781098105099"
+        },
+        {
+            "title": "Mastering the Lightning Network",
+            "subtitle": "A Second Layer Blockchain Protocol for Instant Bitcoin Payments",
+            "isbn13": "9781492054863",
+            "price": "$52.08",
+            "image": "https://itbook.store/img/books/9781492054863.png",
+            "url": "https://itbook.store/books/9781492054863"
+        },
+        {
+            "title": "Programming Android with Kotlin",
+            "subtitle": "Achieving Structured Concurrency with Coroutines",
+            "isbn13": "9781492063001",
+            "price": "$45.09",
+            "image": "https://itbook.store/img/books/9781492063001.png",
+            "url": "https://itbook.store/books/9781492063001"
+        }
+    ]
+}

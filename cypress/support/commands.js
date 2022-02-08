@@ -23,3 +23,13 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add("getBooks", () => {
+    cy.intercept(
+        "GET",
+        'https://api.itbook.store/1.0/new', 
+        { fixture: 'books.json' }).as('getBooks')
+
+    cy.visit('http://localhost:3000')
+    cy.wait('@getBooks')
+})

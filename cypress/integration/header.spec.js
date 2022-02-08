@@ -2,7 +2,9 @@
 
 describe("Header", () => {
     it("should render correct header", () => {
-        cy.visit('http://localhost:3000')
+        //from commands
+        cy.getBooks()
+    
         cy.get('[alt="logo"]').should("be.visible")
         cy.get(".logoText").should("have.text", "IT BOOKS")
         cy.get("[title='Repo on GitHub']")
