@@ -11,6 +11,17 @@ describe("Home page", () => {
         cy.wait('@getBooks')
     })
 
+    it("cart renders correct", () => {
+        cy.get(".cart").should("be.visible")
+        cy.get(".cart").click()
+        cy.get(".cartContainer").
+            should("be.visible")
+           .and("contain", "Your cart is empty")
+        
+        cy.get(".cart").click()
+        cy.get(".cartContainer").should("not.exist")
+    })
+
     it("should render 20 books on home page", () => {
         cy.get(".card")
             .should("be.visible")
