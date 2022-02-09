@@ -7,6 +7,7 @@ describe('Purchase of books by the user', () => {
         //check shop cart is empty
         cy.get('.cart-quantity').should('not.exist')
     })
+
     it('Add book to cart from home page', () => {
         cy.get('.card-action').find('button').first().click()
         //popup added book should appear
@@ -36,6 +37,7 @@ describe('Purchase of books by the user', () => {
 
         //from commands
         cy.getSearch('react')
+        
         cy.get('.moreBtn').eq(4).click()
         cy.get('.card-action').find('button').eq(4).click()
         cy.get('#toast-container').should('be.visible')

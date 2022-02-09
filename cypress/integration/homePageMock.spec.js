@@ -14,9 +14,9 @@ describe("Home page", () => {
     it("cart renders correct", () => {
         cy.get(".cart").should("be.visible")
         cy.get(".cart").click()
-        cy.get(".cartContainer").
-            should("be.visible")
-           .and("contain", "Your cart is empty")
+        cy.get(".cartContainer")
+            .should("be.visible")
+            .and("contain", "Your cart is empty")
         
         cy.get(".cart").click()
         cy.get(".cartContainer").should("not.exist")
