@@ -7,6 +7,7 @@
 ### Technologies used: 
 * React JS (context, reducer, hooks);
 * CSS;
+* Cypress;
 * Materialize;
 * Fetch API;
 * IT Bookstore API (https://api.itbook.store/#api-books);

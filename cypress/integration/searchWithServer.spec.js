@@ -1,17 +1,14 @@
 /// <reference types="cypress" />
 
-describe("Searching function test with mock", () => {
+describe("Searching function test with server", () => {
     beforeEach(() => {
         //from commands
         cy.getBooks()
     })
 
     it("correct search from user side", () => {
-       cy.get("input")
-           .type("react")
-           .should("have.value", "react")
-       
-       cy.get('button').contains(/search/i).click()
+       //from commands
+       cy.getSearch('react')
 
        cy.contains(/found books: 10/i).should('be.visible')
 

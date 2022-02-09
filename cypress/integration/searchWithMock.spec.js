@@ -5,18 +5,8 @@ describe("Searching function test with mock", () => {
          //from commands
         cy.getBooks()
 
-        cy.intercept(
-            "GET",
-            'https://api.itbook.store/1.0/search/*', 
-            { fixture: 'foundBooks.json' }).as('getFoundBooks')
-        
-        cy.get("input")
-            .type("react")
-            .should("have.value", "react")
-        
-        cy.get('button').contains(/search/i).click()
-
-        cy.wait('@getFoundBooks')
+        //from commands
+        cy.getSearch('react')
 
         cy.contains(/found books: 10/i).should('be.visible')
 

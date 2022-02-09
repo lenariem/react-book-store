@@ -33,3 +33,18 @@ Cypress.Commands.add("getBooks", () => {
     cy.visit('http://localhost:3000')
     cy.wait('@getBooks')
 })
+
+Cypress.Commands.add("getSearch", (searchTerm) => {
+    cy.intercept(
+        "GET",
+        'https://api.itbook.store/1.0/search/*', 
+        { fixture: 'foundBooks.json' }).as('getFoundBooks')
+    
+    cy.get("input")
+        .type(searchTerm)
+        .should("have.value", searchTerm)
+    
+    cy.get('button').contains(/search/i).click()
+
+    cy.wait('@getFoundBooks')
+})
